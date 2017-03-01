@@ -1,0 +1,6 @@
+#!/bin/bash
+
+str1=`hostname`
+str2=`uptime -p`
+
+echo "$str1 $str2"

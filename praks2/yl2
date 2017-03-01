@@ -1,0 +1,5 @@
+#!/bin/bash
+#
+echo `date "+Time:%H:%M"`
+echo `date "+Date:%D"`
+echo `date "+ Today is %A"`

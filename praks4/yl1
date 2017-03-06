@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+echo "sisesta a"
+read a
+echo "sisesta b"
+read b
+ruut1=$(($a ** 2))
+ruut2=$(($b ** 2))
+cr=$(($a + $b))
+c=`echo "scale=2;sqrt($cr)"`
+echo "c on $cr"
+

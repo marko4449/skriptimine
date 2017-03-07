@@ -1,0 +1,14 @@
+#!/bin/bash
+#
+echo "sisesta kolmnurga a külg"
+read a
+echo "sisesta kolmnurga b kylg"
+read b
+echo "sisesta kolmnurga c kylg"
+read c
+ymb=$((($a + $b + $c) / 2))
+echo "ymberm66t on $ymb"
+heron=$(($ymb * ($ymb - $a) * ($ymb - $b) * ($ymb - $c)))
+hsqr=`echo "scale=2;sqrt ($heron)" | bc`
+echo "$hsqr"
+

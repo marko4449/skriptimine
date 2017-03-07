@@ -3,8 +3,6 @@ if [ -f yl2 ]
 then 
 	echo "Sul on see fail juba olemas"
 else
-	`echo "#!/bin/bash" >> yl2`
-	`echo "#" >> yl2`
-	`echo "#" >> yl2`
+	`echo -e "#!/bin/bash\n#\n#" >> yl2`
 	`echo chmod +x yl2` 
 fi

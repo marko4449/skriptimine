@@ -1,8 +1,25 @@
 #!/bin/bash
-if [ -f yl2 ]
+echo "sisesta faili nimi"
+read nimi
+if [ -f $nimi ]
 then 
 	echo "Sul on see fail juba olemas"
 else
-	`echo -e "#!/bin/bash\n#\n#" >> yl2`
-	`echo chmod +x yl2` 
+	`echo -e "#!/bin/bash\n#\n#" >> $nimi`
+#	`echo chmod +x $nimi` 
 fi
+#
+if [ -x $nimi ]
+then
+	echo "sinu failil on executable 6igused olemas"	
+else
+	echo "Sinu failil ei ole executable 6igusi olemas soovid, et lisan?(y/n)"
+	read ans
+	if [ $ans = "y" ]
+	then
+	`echo chmod +x $nimi`
+	else
+	exit
+	fi
+fi 
+

@@ -1,15 +1,12 @@
 #!/bin/bash
-v22rtus=0
-v22rtus2=1
-while [ $v22rtus -le 10 ]
+#v22rtus=0
+#v22rtus2=0
+for((v22rtus=0; v22rtus < 10000; v22rtus++))
 do
 echo "Arnold lendas laivi ja tegi sulle $v22rtus folderi"
 `mkdir asdf$v22rtus`
-for((v22rtus2; v22rtus2 < 50; v22rtus2++))
+for((v22rtus2=0; v22rtus2 < 10000; v22rtus2++))
 do
 `mkdir asdf$v22rtus/asdf$v22rtus2`
-echo "$v22rtus2"
-((v22rtus2++))
 done
-((v22rtus++))
 done

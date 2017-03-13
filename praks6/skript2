@@ -1,9 +1,12 @@
 #!/bin/bash
+summa=0
 for((arv=1; arv<11; arv++))
 do
 jaak=$(($arv % 2))
 if [ $jaak -eq 0 ]
 then
-	echo "$arv - $jaak"
+	summa=$(($summa + $arv))
+	
 fi
 done
+echo "Paaris arvude summa on $summa"

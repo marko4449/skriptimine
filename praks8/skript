@@ -1,5 +1,12 @@
 #!/bin/bash
 for ip in 172.23.13.{20..51}
 do
-	ping -c 1 $ip
+	echo -n "$ip - "
+	ping -c 1 $ip > /dev/null
+	
+	if [ $? -eq 0 ]; then
+	echo "masin on sees" >> ip_kontroll
+	else
+	echo "masin on v2ljas" >> ip_kontroll
+	fi
 done

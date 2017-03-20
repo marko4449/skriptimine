@@ -1,0 +1,27 @@
+#!/bin/bash
+for ip in {20..51}
+do
+	ping -c 1 172.23.13.$ip > /dev/null
+	if [ $? -eq 0 ]; then
+		case $ip in
+		20)
+		echo "6petaja on sees"
+		;;
+		25)
+		echo "jaanus on sees"
+		;;
+                35)
+                echo "kristjan on sees"
+		;;
+                26)
+                echo "arnold on sees"
+		;;
+                27)
+                echo "gerda on sees"
+		;;
+		34) 
+		echo "sten on sees"
+		;;
+esac
+fi
+done

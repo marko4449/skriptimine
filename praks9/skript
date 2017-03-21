@@ -1,0 +1,10 @@
+#!/bin/bash
+array=(parool l6vi hello skript nanana variable stuff stoof nice rune)
+for((number=0;number<10;number++))
+do
+
+	useradd user$number
+	echo `echo -e "${array[$number]}\n${array[$number]}" | sudo passwd user$number`
+done
+
+

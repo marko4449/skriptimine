@@ -1,0 +1,14 @@
+#!/bin/bash
+if [ $# -ne 2 ]; then
+	echo "Kasutus"
+	exit 1
+else
+	algus=$1
+	lopp=$2
+	for((nr = $algust; nr<= $lopp; nr++))
+	do
+	useradd -m -s /bin/bash user$nr
+	parool=$(pwgen 8 1) # gen 1 parool 8 symboli pikkusega
+	echo "user$nr:$parool" | chpasswd #parooli m22ramine
+	done
+fi

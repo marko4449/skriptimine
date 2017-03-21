@@ -1,0 +1,13 @@
+#!/bin/bash
+#Marko Kaja IS116 faili kustutaja ja kontrollija
+echo "missugust faili tahad kustudada?"
+read del
+if [ ! -f $del ]
+then
+echo "faili ei ole olemas"
+else
+echo "kustutasime faili ära"
+fi
+rm -rf $del
+echo "Sinu kaustas on järgmised failid"
+ls

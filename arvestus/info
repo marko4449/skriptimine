@@ -1,8 +1,8 @@
 #!/bin/bash
-#Marko Kaja IS116
+#Marko Kaja IS116  kuupäeva näitaja
 echo -n "Tere! " 
 echo  `whoami` #vaatan missuguse kasutajaga on sisse logitud
 echo "Jätkamiseks vajuta enteri"
 read # ootan kasutaja inputi
-echo -n "Täna on " ; date +"%d-%m-%y" #date command et näitaks päeva kuu ja aasta
+echo -n "Täna on " ; date +"%d-%m-%y" ;echo -n "Ja kell on " ; date +"%r" #date command et näitaks päeva kuu ja aasta
 echo `date +"%B"` #date command et näitaks kirjas kuud
